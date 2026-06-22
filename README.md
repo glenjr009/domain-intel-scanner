@@ -27,7 +27,7 @@ WHOIS Lifecycle Tracking: Pulls real-time registrar metadata and timelines to id
 Follow these steps to deploy the scanner locally. Ensure you have Node.js and Python 3.12+ installed.
 
 1. Clone the Repository
-
+```bash
 git clone [https://github.com/glenjr009/domain-intel-scanner.git](https://github.com/glenjr009/domain-intel-scanner.git)
 cd domain-intel-scanner
 
