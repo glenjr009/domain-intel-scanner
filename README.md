@@ -1,48 +1,222 @@
 # ⚡ Domain Intel Scanner
 
-A full-stack OSINT (Open Source Intelligence) and network reconnaissance platform designed for security researchers, students, and defenders. The application combines active network enumeration with passive intelligence gathering through an interactive terminal-style interface.
+## 🛡️ OSINT, Infrastructure Intelligence & Network Reconnaissance Platform
+
+![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge\&logo=python)
+![Flask](https://img.shields.io/badge/Flask-Backend-black?style=for-the-badge\&logo=flask)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge\&logo=react)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-OSINT-green?style=for-the-badge)
+![Networking](https://img.shields.io/badge/Networking-Reconnaissance-red?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
 ---
 
-## 🚀 Features
+## 🚀 Project Overview
 
-### 🔴 Active Reconnaissance
+**Domain Intel Scanner** is a full-stack cybersecurity intelligence platform built for security researchers, penetration testers, SOC analysts, students, and defenders.
 
-* **Port Scanning** – Scan common TCP services (22, 80, 443, 3306, 8080).
-* **HTTP Banner Grabbing** – Retrieve server headers and technology information.
-* **Subdomain Enumeration** – Discover subdomains using Certificate Transparency (CT) logs.
-* **Service Discovery** – Identify publicly exposed services and endpoints.
+The platform combines **Open Source Intelligence (OSINT)** techniques with **active network reconnaissance** to provide visibility into publicly exposed infrastructure, domain configurations, network services, and potential security risks.
 
-### 🔵 Defensive Intelligence
+Rather than performing simple DNS lookups, Domain Intel Scanner correlates intelligence from multiple sources including:
 
-* **Shannon Entropy Analysis** – Detect suspicious or randomly generated domain names.
-* **DNS Record Analysis** – Retrieve A, MX, TXT, and NS records.
-* **WHOIS Lookup** – View registrar, creation date, expiration date, and ownership details.
-* **Infrastructure Visibility** – Understand domain configurations and exposure.
+* 🌐 DNS Infrastructure Records
+* 📜 Certificate Transparency Logs
+* 🛰️ WHOIS Registration Data
+* ⚡ Active TCP Service Discovery
+* 🔍 HTTP Banner Fingerprinting
+* 🧠 Shannon Entropy Analysis
+
+The collected intelligence is aggregated into a cyberpunk-inspired terminal dashboard that presents technical findings in a structured and actionable format.
 
 ---
 
-## 🛠️ Tech Stack
+## 👨‍💻 Author
 
-### Frontend
+**Glen Fernandes**
 
-* React
-* Vite
-* JavaScript
-* CSS
+Cybersecurity Enthusiast | CTF Player | Security Researcher
 
-### Backend
+🔗 LinkedIn: https://www.linkedin.com/in/glen-ferns/
 
-* Python
-* Flask
-* Flask-CORS
+💻 GitHub: https://github.com/glenjr009
 
-### Libraries
+---
 
-* python-whois
-* dnspython
-* requests
-* socket
+## 🎯 Project Objectives
+
+The primary objectives of Domain Intel Scanner are:
+
+* 🔍 Perform active reconnaissance against target domains
+* 🌐 Enumerate DNS infrastructure and records
+* 📜 Discover subdomains using CT logs
+* ⚡ Identify exposed network services
+* 🛰️ Gather WHOIS registration intelligence
+* 🧠 Detect potentially suspicious domains using entropy analysis
+* 📊 Visualize intelligence findings through an interactive dashboard
+* 🛡️ Support both offensive and defensive security workflows
+
+---
+
+## ✨ Key Features
+
+| Feature                       | Description                                             |
+| ----------------------------- | ------------------------------------------------------- |
+| ⚡ Active Port Scanning        | Detects exposed TCP services on common ports            |
+| 🔍 HTTP Banner Fingerprinting | Identifies web technologies and server headers          |
+| 📜 CT Log Enumeration         | Discovers subdomains from Certificate Transparency logs |
+| 🌐 DNS Intelligence           | Retrieves A, MX, TXT, and NS records                    |
+| 🛰️ WHOIS Analysis            | Extracts registrar and lifecycle information            |
+| 🧠 Entropy Scoring            | Detects algorithmically generated domains               |
+| 📊 Dashboard Visualization    | Displays findings in a terminal-style interface         |
+| 🔴 Red Team Recon             | Infrastructure mapping and service discovery            |
+| 🔵 Blue Team Visibility       | Asset inventory and exposure assessment                 |
+
+---
+
+## 🏗️ Intelligence Collection Pipeline
+
+```text
+Target Domain
+      ↓
+WHOIS Lookup
+      ↓
+DNS Intelligence
+      ↓
+CT Log Enumeration
+      ↓
+Subdomain Discovery
+      ↓
+TCP Port Scanning
+      ↓
+HTTP Banner Analysis
+      ↓
+Entropy Calculation
+      ↓
+Risk & Infrastructure Assessment
+      ↓
+Cyberpunk Dashboard
+```
+
+---
+
+## 🔴 Red Team Reconnaissance Modules
+
+### Active TCP Service Discovery
+
+The scanner actively probes commonly exposed services:
+
+```text
+22    → SSH
+80    → HTTP
+443   → HTTPS
+3306  → MySQL
+8080  → Alternate HTTP
+```
+
+Capabilities:
+
+* Multi-port scanning
+* Fast timeout handling
+* Service exposure detection
+* Initial attack surface mapping
+
+---
+
+### HTTP Banner Fingerprinting
+
+Retrieves:
+
+```http
+Server: nginx
+X-Powered-By: Express
+Via: Cloudflare
+```
+
+Used for:
+
+* Technology identification
+* Framework discovery
+* Reverse proxy detection
+* Surface enumeration
+
+---
+
+### Certificate Transparency Enumeration
+
+Queries public CT logs to discover:
+
+* Development subdomains
+* Forgotten assets
+* Staging environments
+* Additional attack surface
+
+Source:
+
+```text
+crt.sh
+```
+
+---
+
+## 🔵 Blue Team Intelligence Modules
+
+### DNS Infrastructure Analysis
+
+Collects:
+
+* A Records
+* MX Records
+* TXT Records
+* NS Records
+
+Used for:
+
+* Asset inventory
+* Email security validation
+* Infrastructure mapping
+
+### WHOIS Lifecycle Analysis
+
+Retrieves:
+
+* Registrar
+* Registration Date
+* Expiry Date
+* Domain Status
+* Ownership Metadata
+
+### Shannon Entropy Analysis
+
+The entropy engine evaluates randomness within domain names.
+
+Higher entropy may indicate:
+
+* DGA domains
+* Malware infrastructure
+* Phishing campaigns
+* Randomized subdomains
+
+Formula:
+
+```text
+H(X) = -Σ p(x) log₂ p(x)
+```
+
+---
+
+## 🧱 Tech Stack
+
+| Layer            | Technology            |
+| ---------------- | --------------------- |
+| Frontend         | React + Vite          |
+| Backend          | Flask                 |
+| Networking       | Python Socket         |
+| DNS Intelligence | dnspython             |
+| WHOIS            | python-whois          |
+| CT Logs          | crt.sh                |
+| HTTP Analysis    | requests              |
+| Visualization    | React Dashboard       |
+| Styling          | Cyberpunk Terminal UI |
 
 ---
 
@@ -53,6 +227,7 @@ domain-intel-scanner/
 │
 ├── backend/
 │   ├── app.py
+│   ├── scanner.py
 │   └── requirements.txt
 │
 ├── frontend/
@@ -62,184 +237,3 @@ domain-intel-scanner/
 │
 └── README.md
 ```
-
----
-
-## ⚙️ Quick Start
-
-### Prerequisites
-
-Install:
-
-* Python 3.12+
-* Node.js 18+
-* npm
-
-Verify installation:
-
-```bash
-python --version
-node --version
-npm --version
-```
-
----
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/glenjr009/domain-intel-scanner.git
-cd domain-intel-scanner
-```
-
----
-
-### 2. Setup Backend
-
-Navigate to backend:
-
-```bash
-cd backend
-```
-
-Create virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate environment:
-
-#### Windows
-
-```powershell
-.\venv\Scripts\activate
-```
-
-#### Linux/macOS
-
-```bash
-source venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
-pip install flask flask-cors python-whois dnspython requests
-```
-
-Run backend server:
-
-```bash
-python app.py
-```
-
-Backend will start on:
-
-```text
-http://localhost:5000
-```
-
----
-
-### 3. Setup Frontend
-
-Open a new terminal:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Frontend will start on:
-
-```text
-http://localhost:5173
-```
-
----
-
-## 🎯 Usage
-
-1. Start the backend server.
-2. Start the frontend application.
-3. Open `http://localhost:5173`.
-4. Enter a domain name.
-5. Run the scan.
-6. Review:
-
-   * Open ports
-   * DNS records
-   * WHOIS information
-   * Entropy score
-   * HTTP headers
-   * Subdomains
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome.
-
-### Create a Feature Branch
-
-```bash
-git checkout -b feature/AmazingFeature
-```
-
-### Commit Changes
-
-```bash
-git commit -m "feat: add passive Shodan integration"
-```
-
-### Push Changes
-
-```bash
-git push origin feature/AmazingFeature
-```
-
-### Open a Pull Request
-
-Please include:
-
-* Description of changes
-* Motivation for the update
-* Testing performed
-* Screenshots (if applicable)
-
----
-
-## 🛣️ Future Enhancements
-
-* Shodan integration
-* VirusTotal integration
-* SSL certificate analysis
-* GeoIP lookup
-* ASN lookup
-* Threat intelligence feeds
-* Machine learning–based risk scoring
-* Export reports (PDF/JSON)
-
----
-
-## ⚖️ Disclaimer
-
-This project is intended for educational purposes, authorized security assessments, research, and defensive security operations only.
-
-Users are responsible for ensuring that all scanning and reconnaissance activities are performed only against systems and networks for which they have explicit authorization.
-
-The authors and contributors are not responsible for any misuse of this software or any consequences resulting from its use.
-
----
-
-## 📜 License
-
-MIT License
-
-Copyright © 2026 Glen Fernandes
-
----
-
-⭐ If you find this project useful, consider starring the repository.
