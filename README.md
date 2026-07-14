@@ -34,7 +34,7 @@ The collected intelligence is aggregated into a cyberpunk-inspired terminal dash
 
 **Glen Fernandes**
 
-Cybersecurity Enthusiast | CTF Player | Security Researcher
+Cybersecurity Enthusiast | CTF Player | SOC |
 
 🔗 LinkedIn: https://www.linkedin.com/in/glen-ferns/
 
